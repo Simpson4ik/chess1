@@ -1,0 +1,66 @@
+﻿<Window x:Class="ChessUI.MainMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChessUI"
+        mc:Ignorable="d"
+        Title="MainMenu" Height="480" Width="320"
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent" ResizeMode="NoResize">
+
+    <Border Style="{StaticResource BorderStyle}"
+            Background="#FF380404" >
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="ШАХИ"
+                       Grid.Row="0"
+                       Style="{StaticResource TextStyle}"
+                       VerticalAlignment="Top"
+                       FontSize="36"
+                       FontWeight="Bold"
+                       Margin="0,30,0,30"/>
+
+            <StackPanel x:Name="MainMenuButtonsPanel" 
+                        Grid.Row="1" 
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top">
+
+                <Button x:Name="PlayWithFriend" Content="ГРАТИ З ДРУГОМ" Style="{StaticResource ButtonStyle}" Width="200" Height="40" Margin="0,5" Click="PlayWithFriendButton_Click"/>
+                
+                <Button x:Name="PlayWithBotButton" Content="ГРАТИ З БОТОМ" 
+                Style="{StaticResource ButtonStyle}" 
+                Width="200" Height="40" Margin="0,5" 
+                Click="PlayWithBotButton_Click"/>
+                
+                <Button x:Name="PlayBlitzButton" 
+                        Content="ГРАТИ В BLITZ" 
+                        Style="{StaticResource ButtonStyle}" 
+                        Width="200" Height="40" Margin="0,5" 
+                        Click="PlayBlitzButton_Click"/>
+
+                <Button x:Name="HelpGuideButton" 
+                        Content="ДОВІДНИК" 
+                        Style="{StaticResource ButtonStyle}" 
+                        Width="200" Height="40" Margin="0,5" 
+                        Click="HelpGuideButton_Click"/>
+
+                <Button x:Name="SettingsButton" Content="НАЛАШТУВАННЯ" 
+        Style="{StaticResource ButtonStyle}" 
+        Width="200" Height="40" Margin="0,5" 
+        Click="SettingsButton_Click"/>
+                
+                <Button x:Name="ExitButton" Content="ВИХІД" Style="{StaticResource ButtonStyle}" Width="200" Height="40" Margin="0,5" Click="ExitButton_Click"/>
+
+            </StackPanel>
+
+            <ContentControl x:Name="HelpGuideContainer" Grid.Row="1" Visibility="Collapsed"/>
+
+        </Grid>
+    </Border>
+</Window>

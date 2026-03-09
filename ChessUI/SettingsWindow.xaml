@@ -1,0 +1,48 @@
+﻿<Window x:Class="ChessUI.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChessUI"
+        mc:Ignorable="d"
+        Title="Налаштування" Height="250" Width="300"
+        WindowStartupLocation="CenterOwner"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent" 
+        ResizeMode="NoResize"
+        Loaded="Window_Loaded">
+    <Border Style="{StaticResource BorderStyle}" Background="#FF380404">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="НАЛАШТУВАННЯ" 
+                       Grid.Row="0"
+                       Style="{StaticResource TextStyle}" 
+                       FontSize="24" 
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="0,20,0,10"/>
+
+            <StackPanel Grid.Row="1" Margin="20">
+                <CheckBox x:Name="SoundCheckBox" 
+          Content="Звук ходу фігур"
+          Foreground="{StaticResource TextColor}" 
+          FontFamily="Segoe UI Light" FontSize="16"
+          VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,20">
+                <Button x:Name="OkButton" Content="OK" 
+                        Style="{StaticResource ButtonStyle}" 
+                        Width="80" Height="35" Margin="5" 
+                        Click="OkButton_Click"/>
+                <Button x:Name="BackButton" Content="НАЗАД" Style="{StaticResource ButtonStyle}" 
+        Width="100" Height="35" Margin="5" 
+        Click="BackButton_Click"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

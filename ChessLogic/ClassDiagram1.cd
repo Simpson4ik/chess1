@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ChessLogic.Castle">
+    <Position X="5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAASEAAAAAAAAAAAAAAAAIQQAAAAAAAA=</HashCode>
+      <FileName>Moves\Castle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.DoublePawn">
+    <Position X="9.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAgAAIQAAAAAAAAA=</HashCode>
+      <FileName>Moves\DoublePawn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.EnPassant">
+    <Position X="11.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIQAAAAAAAAAAAAAAAAAIQAAAAAAAAA=</HashCode>
+      <FileName>Moves\EnPassant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.Move">
+    <Position X="9.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAIQAAAAAAAAA=</HashCode>
+      <FileName>Moves\Move.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.NormalMove">
+    <Position X="13.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAIQAAAAAAAAA=</HashCode>
+      <FileName>Moves\NormalMove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.PawnPromotion">
+    <Position X="7" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAgAAAAAAIQIAAAAAAAA=</HashCode>
+      <FileName>Moves\PawnPromotion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.Bishop">
+    <Position X="1.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAEAAAAAAAAAAAQAAAAAAgAAAAAAAQAAgAAAAAA=</HashCode>
+      <FileName>Pieces\Bishop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.King">
+    <Position X="6" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAEAgQAAAAAAAAQAAEAAQgAAAAAAAQAAgAAAAEA=</HashCode>
+      <FileName>Pieces\King.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.Knight">
+    <Position X="10.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAQAAAAACAAQAAAAAAgAAAAAAAQAAgAAAAAA=</HashCode>
+      <FileName>Pieces\Knight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.Pawn">
+    <Position X="12.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAgEAAAEAAAAAAASgAAAAAgAAAAAAAQCAgAAAAAA=</HashCode>
+      <FileName>Pieces\Pawn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.Piece">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAEAAAAAAAAAAAYAAAAAAgAAAAAAAQAAgAAAAAA=</HashCode>
+      <FileName>Pieces\Piece.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.Queen">
+    <Position X="3.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAEAAAAAAAAAAAQAAAAAAgAAAAAAAQAAgAAAAAA=</HashCode>
+      <FileName>Pieces\Queen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.Rook">
+    <Position X="8.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAEAAAAAAAAAAAQAAAAAAgAAAAAAAQAAgAAAAAA=</HashCode>
+      <FileName>Pieces\Rook.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.Board">
+    <Position X="18.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EABAAAAIABAIgCBACACYAEQAEgAAAQAgQAIAAAAAAKQ=</HashCode>
+      <FileName>Board.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.Counting">
+    <Position X="20" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAABAAAIAAAAAAABAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Counting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.Direction">
+    <Position X="21.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACCCABABAAAAAAwAYAAAAAAAEAAAAAAAAAAAAAABAAQ=</HashCode>
+      <FileName>Direction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.GameState">
+    <Position X="16.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAIAgAAAAEAAgACAAAAARAACAAAgAABEAAgCKAAAA=</HashCode>
+      <FileName>GameState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.PlayerExtensions">
+    <Position X="21.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.Position">
+    <Position X="23.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAwABAAAQAAAAAAoAAAAAAAAAAAiA=</HashCode>
+      <FileName>Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.Result">
+    <Position X="20" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAgIAAECAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Result.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessLogic.StateString">
+    <Position X="23.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAgAAAGAAAAAAAEAAAgAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>StateString.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ChessLogic.EndReason">
+    <Position X="14.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAEAAAACAAAAAAAAAAgAAIAAAIAAAAAAAA=</HashCode>
+      <FileName>EndReason.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ChessLogic.MoveType">
+    <Position X="16.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAJAAAAAAQAAAEABAA=</HashCode>
+      <FileName>MoveType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ChessLogic.PieceType">
+    <Position X="16.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAEggAAAAEAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PieceType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ChessLogic.Player">
+    <Position X="14.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

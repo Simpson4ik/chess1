@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="ChessUI.HelpGuide"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ChessUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="300">
+    <Border Style="{StaticResource BorderStyle}" Padding="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="ДОВІДНИК ПО ГРІ" 
+                       Style="{StaticResource TextStyle}" 
+                       FontSize="24" 
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,10"/>
+
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="0,0,0,10">
+                <TextBlock Style="{StaticResource TextStyle}" TextWrapping="Wrap" FontSize="14">
+                    <LineBreak/><LineBreak/>
+                    <Run FontWeight="Bold">Мета гри:</Run><LineBreak/>
+                    Головна мета гри - поставити мат королю суперника. Мат – це ситуація, коли король атакований (перебуває під шахом), і немає жодного можливого ходу, щоб уникнути цієї атаки.
+                    <LineBreak/><LineBreak/>
+                    <Run FontWeight="Bold">Початок гри:</Run><LineBreak/>
+                    1. Шахівниця розміщується так, щоб у кожного гравця справа внизу було біле поле.<LineBreak/>
+                    2. Кожен гравець має 16 фігур: 1 король, 1 ферзь, 2 тури, 2 слони, 2 коні та 8 пішаків.<LineBreak/>
+                    3. Фігури розставляються на двох крайніх горизонталях. Другий ряд від гравця займають пішаки.<LineBreak/>
+                    4. Гру завжди починають білі. Гравці ходять по черзі.
+                    <LineBreak/><LineBreak/>
+                    <Run FontWeight="Bold">Загальні правила ходів:</Run><LineBreak/>
+                    - За один хід можна перемістити лише одну фігуру (виняток – рокіровка).<LineBreak/>
+                    - Не можна робити хід на поле, зайняте власною фігурою.<LineBreak/>
+                    - Фігури не можуть перестрибувати через інші фігури (виняток – кінь та тура під час рокіровки).<LineBreak/>
+                    - Якщо фігура робить хід на поле, зайняте фігурою суперника, фігура суперника "береться" (знімається з дошки).<LineBreak/>
+                    - Не можна робити хід, після якого ваш король опиняється під шахом.
+                    <LineBreak/><LineBreak/>
+                    <Run FontWeight="Bold">Фігури та їхні ходи:</Run><LineBreak/>
+                    - <Run FontWeight="Bold">Пішак (Pawn):</Run><LineBreak/>
+                      Ходить тільки вперед на одну клітинку. З початкової позиції може зробити перший хід на одну або дві клітинки вперед.<LineBreak/>
+                      Б'є по діагоналі вперед на одну клітинку.<LineBreak/>
+                      Не може ходити або бити назад.<LineBreak/>
+                      Особливі ходи: взяття на проході та перетворення (див. нижче).<LineBreak/>
+                    - <Run FontWeight="Bold">Кінь (Knight):</Run><LineBreak/>
+                      Ходить буквою "Г": дві клітинки в одному напрямку (по горизонталі або вертикалі) і потім одну клітинку перпендикулярно.<LineBreak/>
+                      Єдина фігура, яка може перестрибувати через інші фігури (як свої, так і чужі).<LineBreak/>
+                    - <Run FontWeight="Bold">Слон (Bishop):</Run><LineBreak/>
+                      Ходить на будь-яку кількість клітинок по діагоналі.<LineBreak/>
+                      Кожен гравець має двох слонів: один ходить по білих полях, інший – по чорних.<LineBreak/>
+                    - <Run FontWeight="Bold">Тура (Rook):</Run><LineBreak/>
+                      Ходить на будь-яку кількість клітинок по горизонталі або вертикалі.<LineBreak/>
+                    - <Run FontWeight="Bold">Ферзь (Queen):</Run><LineBreak/>
+                      Найсильніша фігура. Ходить на будь-яку кількість клітинок по горизонталі, вертикалі або діагоналі.<LineBreak/>
+                    - <Run FontWeight="Bold">Король (King):</Run><LineBreak/>
+                      Найважливіша фігура. Ходить на одну клітинку в будь-якому напрямку (горизонталь, вертикаль, діагональ).<LineBreak/>
+                      Не може ходити на поле, яке атаковане фігурою суперника (під шах).<LineBreak/>
+                      Особливий хід: рокіровка (див. нижче).
+                    <LineBreak/><LineBreak/>
+                    <Run FontWeight="Bold">Спеціальні ходи:</Run><LineBreak/>
+                    - <Run FontWeight="Bold">Рокіровка (Castling):</Run><LineBreak/>
+                      Це спільний хід короля та однієї з тур. Король переміщується на дві клітинки в бік тури, а тура стає на клітинку, яку король щойно перетнув.<LineBreak/>
+                      Умови для рокіровки:<LineBreak/>
+                      1. Ні король, ні відповідна тура ще не ходили в партії.<LineBreak/>
+                      2. Між королем і турою немає інших фігур.<LineBreak/>
+                      3. Король не перебуває під шахом.<LineBreak/>
+                      4. Поле, яке король перетинає, і поле, на яке він стає, не атаковані фігурами суперника.<LineBreak/>
+                    - <Run FontWeight="Bold">Взяття на проході (En Passant):</Run><LineBreak/>
+                      Застосовується до пішаків. Якщо пішак суперника зі своєї початкової позиції робить хід на дві клітинки вперед і стає на одній горизонталі поруч із вашим пішаком, ви маєте право взяти цього пішака своїм пішаком так, ніби він пішов лише на одну клітинку. Ваш пішак стає на поле, яке перетнув пішак суперника.<LineBreak/>
+                      Це право існує лише протягом наступного ходу після подвійного ходу пішака суперника.<LineBreak/>
+                    - <Run FontWeight="Bold">Перетворення пішака (Pawn Promotion):</Run><LineBreak/>
+                      Коли пішак досягає останньої горизонталі (восьмої для білих, першої для чорних), він негайно замінюється на ферзя, туру, слона або коня того ж кольору за вибором гравця.
+                    <LineBreak/><LineBreak/>
+                    <Run FontWeight="Bold">Шах і Мат:</Run><LineBreak/>
+                    - <Run FontWeight="Bold">Шах:</Run> Ситуація, коли король атакований фігурою суперника. Гравець, чий король під шахом, зобов'язаний негайно захистити короля одним із способів:<LineBreak/>
+                      1. Відійти королем на безпечне поле.<LineBreak/>
+                      2. Закрити короля іншою своєю фігурою.<LineBreak/>
+                      3. Взяти фігуру, яка оголосила шах.<LineBreak/>
+                    - <Run FontWeight="Bold">Мат (Checkmate):</Run> Якщо король під шахом і немає жодного легального ходу, щоб уникнути шаху, це мат. Гравець, який поставив мат, виграє партію.
+                    <LineBreak/><LineBreak/>
+                    <Run FontWeight="Bold">Завершення гри внічию:</Run><LineBreak/>
+                    Партія може закінчитися внічию в таких випадках:<LineBreak/>
+                    - <Run FontWeight="Bold">Пат (Stalemate):</Run> Гравець, чия черга ходити, не має жодного легального ходу, але його король НЕ перебуває під шахом.<LineBreak/>
+                    - <Run FontWeight="Bold">Угода гравців:</Run> Гравці можуть домовитися про нічию.<LineBreak/>
+                    - <Run FontWeight="Bold">Трократне повторення позиції:</Run> Якщо одна й та сама позиція на дошці виникає тричі (з тією ж чергою ходу та тими ж можливими ходами, включно з правом на рокіровку та взяття на проході).<LineBreak/>
+                    - <Run FontWeight="Bold">Правило 50 ходів:</Run> Якщо протягом останніх 50 ходів кожного гравця не було зроблено жодного ходу пішаком і не було взято жодної фігури.<LineBreak/>
+                    - <Run FontWeight="Bold">Недостатність матеріалу для мату:</Run> Якщо на дошці виникає позиція, де жоден із гравців не може поставити мат супернику будь-якою серією легальних ходів (наприклад, король проти короля; король і слон проти короля; король і кінь проти короля).
+                    <LineBreak/><LineBreak/>
+                </TextBlock>
+            </ScrollViewer>
+
+            <Button Grid.Row="2" 
+                    x:Name="BackButton"
+                    Content="НАЗАД"
+                    Style="{StaticResource ButtonStyle}"
+                    Width="120"
+                    Height="35"
+                    HorizontalAlignment="Center"
+                    Click="BackButton_Click"/>
+        </Grid>
+    </Border>
+</UserControl>
