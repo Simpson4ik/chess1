@@ -8,7 +8,8 @@ namespace ChessLogic
 {
     public class Board
     {
-        private readonly Piece[,] pieces = new Piece[8, 8];
+        public const int BoardSize = 8;
+        private readonly Piece[,] pieces = new Piece[BoardSize, BoardSize];
 
 
         private readonly Dictionary<Player, Position> pawnSkipPositions = new Dictionary<Player, Position>
@@ -68,7 +69,7 @@ namespace ChessLogic
             this[0, 7] = new Rook(Player.Black);
             this[7, 7] = new Rook(Player.White);
 
-            for (int c = 0; c < 8; c++)
+            for (int c = 0; c < BoardSize; c++)
             {
                 this[1, c] = new Pawn(Player.Black);
                 this[6, c] = new Pawn(Player.White);
@@ -76,7 +77,7 @@ namespace ChessLogic
         }
         public static bool IsInside(Position pos)
         {
-            return pos.Row >= 0 && pos.Row < 8 && pos.Column >= 0 && pos.Column < 8;
+            return pos.Row >= 0 && pos.Row < BoardSize && pos.Column >= 0 && pos.Column < BoardSize;
         }
 
         public bool IsEmpty(Position pos)
@@ -86,9 +87,9 @@ namespace ChessLogic
 
         public IEnumerable<Position> PiecePositions()
         {
-            for (int r = 0; r < 8; r++)
+            for (int r = 0; r < BoardSize; r++)
             {
-                for (int c = 0; c < 8; c++)
+                for (int c = 0; c < BoardSize; c++)
                 {
                     Position pos = new Position(r, c);
 
