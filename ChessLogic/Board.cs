@@ -242,28 +242,16 @@ namespace ChessLogic
             };
             return HasPawnInPosition(player, pawnPosition, skipPos);
         }
-        public bool InsufficientMaterialForWin(Player player)
+       public bool InsufficientMaterialForWin(Player player)
         {
-            int queenCount = 0;
-            int rookCount = 0;
-            int bishopCount = 0;
-            int knightCount = 0;
-            int pawnCount = 0;
+            Counting counting = CountPieces();
 
-            foreach (Position pos in PiecePositionsFor(player))
-            {
-                Piece p = this[pos];
-                if (p == null) continue;
+            int queenCount = player == Player.White ? counting.White(PieceType.Queen) : counting.Black(PieceType.Queen);
+            int rookCount = player == Player.White ? counting.White(PieceType.Rook) : counting.Black(PieceType.Rook);
+            int bishopCount = player == Player.White ? counting.White(PieceType.Bishop) : counting.Black(PieceType.Bishop);
+            int knightCount = player == Player.White ? counting.White(PieceType.Knight) : counting.Black(PieceType.Knight);
+            int pawnCount = player == Player.White ? counting.White(PieceType.Pawn) : counting.Black(PieceType.Pawn);
 
-                switch (p.Type)
-                {
-                    case PieceType.Queen: queenCount++; break;
-                    case PieceType.Rook: rookCount++; break;
-                    case PieceType.Bishop: bishopCount++; break;
-                    case PieceType.Knight: knightCount++; break;
-                    case PieceType.Pawn: pawnCount++; break;
-                }
-            }
             if (queenCount > 0 || rookCount > 0 || pawnCount > 0)
             {
                 return false;
